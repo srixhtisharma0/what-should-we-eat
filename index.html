@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What Should We Eat?</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <h1>What should we eat?</h1>
+      <p>Enter a restaurant and see your history or get a top dish recommendation.</p>
+    </section>
+
+    <section class="search-panel">
+      <form id="restaurant-form" autocomplete="off">
+        <label for="restaurant-name">Restaurant name</label>
+        <input id="restaurant-name" name="restaurant" type="text" placeholder="e.g. Little Pho" required />
+        <button type="submit">Check restaurant</button>
+      </form>
+    </section>
+
+    <section id="result-panel" class="result-panel hidden">
+      <div id="restaurant-summary" class="restaurant-summary"></div>
+      <div id="history-panel" class="history-panel"></div>
+      <div id="add-visit-panel" class="add-visit-panel hidden">
+        <h2>Add a visit</h2>
+        <form id="visit-form">
+          <label for="dish-name">Dish ordered</label>
+          <input id="dish-name" name="dish" type="text" placeholder="e.g. Pad Thai" required />
+
+          <label for="visit-note">Notes</label>
+          <textarea id="visit-note" name="note" placeholder="What did you like or dislike?"></textarea>
+
+          <fieldset>
+            <legend>Did you like it?</legend>
+            <label><input type="radio" name="liked" value="yes" checked /> Yes</label>
+            <label><input type="radio" name="liked" value="no" /> No</label>
+          </fieldset>
+
+          <button type="submit">Save visit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

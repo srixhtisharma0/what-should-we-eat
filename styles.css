@@ -1,0 +1,202 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f7fb;
+  color: #1d2939;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+}
+
+.app-shell {
+  width: min(960px, 100%);
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+.hero h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+}
+
+.hero p {
+  margin: 0;
+  color: #495670;
+  font-size: 1rem;
+}
+
+.search-panel {
+  margin-top: 28px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d8e2ef;
+  border-radius: 14px;
+  font-size: 1rem;
+  background: #f9fbff;
+  margin-bottom: 16px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 14px;
+  background: #1d4ed8;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+button:hover {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.result-panel {
+  margin-top: 32px;
+}
+
+.hidden {
+  display: none;
+}
+
+.restaurant-summary,
+.history-panel,
+.add-visit-panel {
+  background: #f8fbff;
+  border: 1px solid #dbe7f7;
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.restaurant-summary h2,
+.add-visit-panel h2 {
+  margin-top: 0;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-item {
+  padding: 16px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 12px;
+}
+
+.history-item:last-child {
+  margin-bottom: 0;
+}
+
+.history-item strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.history-item .visit-note {
+  margin: 10px 0 0;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.history-item textarea {
+  width: 100%;
+  min-height: 90px;
+  margin-top: 12px;
+}
+
+.edit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.small-button {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.92rem;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.status-chip--yes {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-chip--no {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+fieldset {
+  border: 1px solid #d8e2ef;
+  border-radius: 16px;
+  padding: 18px 16px;
+  margin: 0 0 16px;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: 600;
+}
+
+fieldset label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 16px;
+  }
+  .app-shell {
+    padding: 24px;
+  }
+}
